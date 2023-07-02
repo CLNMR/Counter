@@ -1,11 +1,12 @@
 import 'package:counter_core/counter_core.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+  test('Create a counter', () {
+    const color = CounterColor.red;
+    final counter = Counter(name: 'Test', value: 2, color: color);
+    expect(counter.name, 'Test');
+    expect(counter.value, 2);
+    expect(counter.color, color);
   });
 }

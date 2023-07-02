@@ -1,7 +1,5 @@
+/// The business logic of the Counter app.
 library counter_core;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/models/counter.dart';
+export 'src/util/counter_color.dart';

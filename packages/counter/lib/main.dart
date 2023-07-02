@@ -1,18 +1,19 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const CounterApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+/// The Counter app.
+class CounterApp extends StatelessWidget {
+  /// Creates a Counter app.
+  const CounterApp({super.key});
 
   @override
-  Widget build(BuildContext context) => const MaterialApp(
-        home: Scaffold(
-          body: Center(
-            child: Text('Hello World!'),
-          ),
-        ),
+  Widget build(BuildContext context) => const CupertinoApp(
+        home: HomeScreen(),
+        locale: Locale('de', 'DE'),
       );
 }
